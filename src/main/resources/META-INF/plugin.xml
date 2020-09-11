@@ -1,0 +1,29 @@
+<idea-plugin>
+    <id>com.mairuis.saver.saver</id>
+    <name>拯救大泥球一样的代码</name>
+    <vendor email="xh001x@hotmail.com" url="http://no-company">2333</vendor>
+
+    <description><![CDATA[
+      Demonstrates implementing a Local Inspection Tool.<br> Adds entries to
+      <b>Preferences | Editor | Inspections | Java | Probable Bugs</b>.
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <localInspection language="JAVA"
+                         displayName="Replace to JExcel table framework"
+                         groupPath="Java"
+                         groupBundle="messages.InspectionsBundle"
+                         groupKey="group.names.probable.bugs"
+                         enabledByDefault="true"
+                         level="WARNING"
+                         implementationClass="com.mairuis.saver.SaveModelReadInspection"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
